@@ -1,0 +1,11 @@
+{
+  "name": "research-experiment-record",
+  "version": "1.0.0",
+  "description": "Turn research notes into editable, linked experiment records.",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "build": "node --check src/main.js && node -e \"require('node:fs').copyFileSync('src/main.js', 'main.js')\""
+  },
+  "license": "MIT"
+}

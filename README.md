@@ -17,6 +17,8 @@ The form copies text under recognized Markdown headings and from labels such as 
 
 Every record is ordinary Markdown with Obsidian properties for type, status, creation date, title, and source. The original note is not edited. Edit the record and its properties directly as the study progresses.
 
-`main.js` is both the source and the installable JavaScript. No build step is required.
+The source is in [`src/main.js`](src/main.js). Run `npm run build` to copy it to the installable `main.js` at the plugin root.
+
+[Source and other plugins](https://github.com/HackrLife/Obsidian-PlugIns/tree/main/plugins/research-experiment-record) · [Release downloads](https://github.com/HackrLife/research-experiment-record/releases)
 
 Licensed under the [MIT License](LICENSE).
