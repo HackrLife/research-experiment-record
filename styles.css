@@ -1,0 +1,29 @@
+.research-experiment-record {
+  width: min(780px, 95vw);
+}
+
+.research-experiment-record .setting-item-control textarea {
+  width: 100%;
+  min-width: 16em;
+  resize: vertical;
+}
+
+.research-experiment-record .research-experiment-error {
+  color: var(--text-error);
+}
+
+.research-experiment-record .research-experiment-error:empty {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .research-experiment-record .setting-item:has(textarea) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5em;
+  }
+
+  .research-experiment-record .setting-item-control textarea {
+    min-width: 0;
+  }
+}

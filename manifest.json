@@ -1,0 +1,9 @@
+{
+  "id": "research-experiment-record",
+  "name": "Research Experiment Record",
+  "version": "1.0.0",
+  "minAppVersion": "1.5.0",
+  "description": "Turn research notes into editable, linked experiment records.",
+  "author": "Dev Das",
+  "isDesktopOnly": false
+}
