@@ -1,8 +1,8 @@
-name: Publish initial plugin release
+name: Publish plugin release
 on:
   push:
     branches: [main]
-    paths: ['.github/workflows/initial-release.yml']
+    paths: ['manifest.json', '.github/workflows/initial-release.yml']
 permissions:
   contents: write
 jobs:
@@ -19,6 +19,10 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           VERSION=$(node -p "require('./manifest.json').version")
+          if gh release view "$VERSION" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Release $VERSION already exists."
+            exit 0
+          fi
           gh release create "$VERSION" main.js manifest.json styles.css \
             --target "$GITHUB_SHA" --title "$VERSION" \
             --notes 'Initial release. Turn a research note into an editable, linked experiment record.'
